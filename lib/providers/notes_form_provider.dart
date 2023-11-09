@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../models/note_model.dart';
+import '../models/modelo_estudiante.dart';
 
-class NotesFormProvider extends ChangeNotifier {
+class EstudiantesFormProvider extends ChangeNotifier {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  Note note;
+  Estudiante estudiante;
 
-  NotesFormProvider(this.note);
+  EstudiantesFormProvider(this.estudiante);
 
   bool isValidForm() {
     return formKey.currentState?.validate() ?? false;

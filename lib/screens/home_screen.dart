@@ -4,8 +4,8 @@ import 'package:provider/provider.dart';
 
 import '../providers/actual_option_provider.dart';
 import '../widgets/custom_navigatorbar.dart';
-import 'create_note_screen.dart';
-import 'list_notes_screen.dart';
+import 'crear_estudiante_screen.dart';
+import 'list_estudiantes_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Center(child: Text("Home Notas")),
+          title: const Center(child: Text("Base de datos-Estudiantes")),
         ),
         body: _HomeScreenBody(),
         bottomNavigationBar: const CustomNavigatorBar());
@@ -31,11 +31,11 @@ class _HomeScreenBody extends StatelessWidget {
 
     switch (selectedOption) {
       case 0:
-        return const ListNotesScreen();
+        return const ListEstudiantesScreen();
       case 1:
-        return const CreateNoteScreen();
+        return const CreateEstudianteScreen();
       default:
-        return const ListNotesScreen();
+        return const ListEstudiantesScreen();
     }
   }
 }

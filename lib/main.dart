@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_api_crud_app/providers/actual_option_provider.dart';
 import 'package:notes_api_crud_app/screens/home_screen.dart';
-import 'package:notes_api_crud_app/services/notes_service.dart';
+import 'package:notes_api_crud_app/services/estudiantes_service.dart';
 
 import 'package:provider/provider.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (_) => ActualOptionProvider()),
-          ChangeNotifierProvider(create: (_) => NotesService())
+          ChangeNotifierProvider(create: (_) => EstudiantesService())
         ],
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
